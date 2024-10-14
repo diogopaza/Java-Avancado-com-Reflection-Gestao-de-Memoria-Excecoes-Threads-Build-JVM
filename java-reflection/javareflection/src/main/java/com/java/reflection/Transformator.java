@@ -30,6 +30,11 @@ public class Transformator {
                             } catch (IllegalAccessException e) {
                                 throw new RuntimeException(e);
                             }
+                            try {
+                                targetField.set(targetClass, sourceField.get(input));
+                            } catch (IllegalAccessException e) {
+                                throw new RuntimeException(e);
+                            }
                         }));
 
         return targetClass;
