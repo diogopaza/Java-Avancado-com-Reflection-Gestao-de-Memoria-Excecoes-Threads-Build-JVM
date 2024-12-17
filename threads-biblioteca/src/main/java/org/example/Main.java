@@ -18,13 +18,13 @@ public class Main {
         threadJoao.start();
         threadRoberto.start();
 
-        try {
-            threadMaria.join();
-            threadJoao.join();
-            threadRoberto.join();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            threadMaria.join();
+//            threadJoao.join();
+//            threadRoberto.join();
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
         System.out.println("Reservas finalizadas!\n");
     }
